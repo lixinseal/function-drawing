@@ -1,0 +1,20 @@
+{
+  "name": "function-drawing-offline",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 4174",
+    "prebuild": "node scripts/prepare-icons.mjs",
+    "build": "tsc --noEmit && vite build && node scripts/build-pwa.mjs",
+    "build:web": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4175"
+  },
+  "dependencies": {
+    "lucide": "^1.77.0"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8"
+  }
+}
